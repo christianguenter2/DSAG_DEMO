@@ -11,13 +11,22 @@ CLASS zcl_dsag_demo_model DEFINITION
     METHODS:
       select
         RETURNING
-          VALUE(rt_data) TYPE tty_dsag_demo.
+          VALUE(rt_data) TYPE tty_dsag_demo,
+
+      delete_all.
 
 ENDCLASS.
 
 
 
 CLASS ZCL_DSAG_DEMO_MODEL IMPLEMENTATION.
+
+
+  METHOD delete_all.
+
+    DELETE FROM zdsag_demo.
+
+  ENDMETHOD.
 
 
   METHOD select.
