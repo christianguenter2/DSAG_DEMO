@@ -5,7 +5,7 @@ CLASS zcl_dsag_demo_model DEFINITION
 
   PUBLIC SECTION.
     TYPES:
-    tty_dsag_demo TYPE STANDARD TABLE OF zdsag_demo
+    tty_dsag_demo TYPE STANDARD TABLE OF zdsag_demo_cds
                        WITH NON-UNIQUE DEFAULT KEY.
 
     METHODS:
@@ -19,7 +19,7 @@ ENDCLASS.
 
 
 
-CLASS ZCL_DSAG_DEMO_MODEL IMPLEMENTATION.
+CLASS zcl_dsag_demo_model IMPLEMENTATION.
 
 
   METHOD delete_all.
@@ -31,7 +31,7 @@ CLASS ZCL_DSAG_DEMO_MODEL IMPLEMENTATION.
 
   METHOD select.
 
-    SELECT FROM zdsag_demo
+    SELECT FROM zdsag_demo_cds
            FIELDS *
            INTO TABLE @rt_data.
 
