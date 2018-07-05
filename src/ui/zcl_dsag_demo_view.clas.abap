@@ -19,6 +19,7 @@ CLASS zcl_dsag_demo_view IMPLEMENTATION.
   METHOD display.
 
     cl_demo_output=>display( data ).
+    cl_demo_output=>display( |Hallo DSAG!| ).
 
   ENDMETHOD.
 
